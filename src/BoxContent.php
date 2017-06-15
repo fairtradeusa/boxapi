@@ -105,9 +105,9 @@ trait BoxContent {
 	}
 
 	/* Update file */
-	public function updateFileInfo($file_id, $file_name, $json = false) {
+	public function updateFileInfo($file_id, $data, $json = false) {
 		$url = $this->api_url . "/files/$file_id";
-		$data = "-d '{\"name\":\"$file_name\"}'";
+		$data = "-d '$data'";
 		return $this->put($url, $json, $data);
 	}
 

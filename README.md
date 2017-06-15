@@ -1,6 +1,6 @@
 # Box API v.2 For PHP
 
-This is a package can be used with PHP Project and especially integrate with Laravel. This package will serve latest Box API for App User for Enterprise to communicate server to server (eg. Uploading files to company Box behind the scene without ask grant to your web visitor, and Standard User for common user accesing their own Box account, and this will need grant access from their account.
+This package can be used with a PHP Project and integrates especially well with Laravel. This package will serve latest Box API for App User for Enterprise to communicate server to server (eg. Uploading files to company Box behind the scene without ask grant to your web visitor, and Standard User for common user accesing their own Box account, and this will need grant access from their account).
 
 ## Installation on Laravel
 
@@ -154,7 +154,7 @@ Folder   | getTrashedFolder($id)                  | Get    | [Get Trashed Folder
 Folder   | permanentDelete($id)                   | Delete | [Permanently Delete](https://box-content.readme.io/reference#permanently-delete-a-trashed-folder)
 Folder   | restoreFolder($id, $newName)           | Get    | [Restore Folder](https://box-content.readme.io/reference#restore-a-trashed-folder)
 File     | getFileInfo($id)                       | Get    | [Get File's Info](https://box-content.readme.io/reference#files)
-File     | updateFileInfo($id, $name)             | Put    | [Update File's Info](https://box-content.readme.io/reference#update-a-files-information)
+File     | updateFileInfo($id, $data)             | Put    | [Update File's Info](https://box-content.readme.io/reference#update-a-files-information)
 File     | toggleLock($id, $type, $expire, $down) | Put    | [Lock and Unlock](https://box-content.readme.io/reference#lock-and-unlock)
 File     | downloadFile($id)                      | Get    | [Download File](https://box-content.readme.io/reference#download-a-file)
 File     | uploadFile($file, $parent, $name)      | Post   | [Upload File](https://box-content.readme.io/reference#upload-a-file)
