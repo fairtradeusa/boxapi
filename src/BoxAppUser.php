@@ -35,7 +35,7 @@ class BoxAppUser
 	private $auth_header	= '';
 
 	// These urls below used for Box Content API
-	private $token_url	 	= 'https://www.box.com/api/oauth2/token';
+	private $token_url	 	= 'https://api.box.com/oauth2/token';
 	private $api_url 		= 'https://api.box.com/2.0';
 	private $upload_url 	= 'https://upload.box.com/api/2.0';
 
@@ -107,11 +107,11 @@ class BoxAppUser
 		$cid = $this->config['au_client_id'];
 		$csc = $this->config['au_client_secret'];
 
-		$result = shell_exec("curl $this->token_url $attributes&client_id=$cid&client_secret=$csc&assertion=$assertion' -X POST");
+		$result = shell_exec("curl -L $this->token_url $attributes&client_id=$cid&client_secret=$csc&assertion=$assertion' -X POST");
 		
 		try
 		{
-	            $this->access_token = json_decode($result, true)["access_token"];
+	        $this->access_token = json_decode($result, true)["access_token"];
 		}
 		catch(\Exception $exception)
 		{
